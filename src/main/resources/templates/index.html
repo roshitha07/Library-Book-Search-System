@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Library Management</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+
+body{
+    background: linear-gradient(135deg,#e0f7fa,#e3f2fd);
+    font-family: 'Segoe UI', sans-serif;
+}
+.main-container{
+display:flex;
+gap:60px;
+padding:50px;
+align-items:flex-start;
+}
+
+.left-panel{
+    width:40%;
+    max-height:80vh;
+    overflow-y:auto;
+}
+
+.right-panel{
+width:60%;
+display:flex;
+justify-content:flex-start;
+align-items:flex-start;
+padding-left:40px;
+padding-top: 0px;
+}
+
+.book-card{
+    background:white;
+    padding:15px;
+    margin-bottom:15px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+.navbar{
+    box-shadow:0 2px 8px rgba(0,0,0,0.15);
+}
+
+.main-card{
+    width:100%;
+    max-width:600px;
+    margin:auto;
+    border-radius:18px;
+    padding:30px;
+    background:rgba(255,255,255,0.9);
+    backdrop-filter: blur(10px);
+    box-shadow:0 10px 30px rgba(0,0,0,0.15);
+}
+
+.title{
+    font-weight:600;
+    color:#0d6efd;
+    margin-bottom:15px;
+}
+
+input{
+    border-radius:10px !important;
+    padding:12px !important;
+}
+
+.btn{
+    border-radius:10px;
+    font-weight:500;
+    letter-spacing:0.5px;
+}
+
+.btn-success{
+    background:#198754;
+}
+
+.btn-info{
+    background:#0dcaf0;
+    color:white;
+}
+
+.sort-btn{
+    background:#ffc107;
+    font-weight:600;
+    padding:8px 25px;
+    border-radius:8px;
+}
+
+.sort-btn:hover{
+    background:#ffca2c;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="main-container">
+
+    <!-- LEFT PANEL -->
+    <div class="left-panel">
+    <h2>📚 Existing Books</h2>
+
+    <div th:each="b : ${books}">
+        <div class="book-card">
+            <h3 th:text="${b.title}">Title</h3>
+            <p>ID : <span th:text="${b.id}">1</span></p>
+            <p>Author : <span th:text="${b.author}">Author</span></p>
+        </div>
+    </div>
+
+</div>
+
+
+    <!-- RIGHT PANEL -->
+    <div class="right-panel">
+        <div class="card main-card">
+
+            <div th:if="${message}"
+     class="alert text-center"
+     th:classappend="${message.contains('exists')} ? 'alert-danger' : 'alert-success'">
+
+    <span th:text="${message}"></span>
+
+</div>
+    <h3 class="text-center title">Add Book</h3>
+
+
+    <form action="/addBook" method="post" class="mt-3">
+
+        <div class="mb-3">
+            <input type="number" name="id" class="form-control" placeholder="Enter Book ID" required>
+        </div>
+
+        <div class="mb-3">
+            <input type="text" name="title" class="form-control" placeholder="Enter Book Title" required>
+        </div>
+
+        <div class="mb-3">
+            <input type="text" name="author" class="form-control" placeholder="Enter Author Name" required>
+        </div>
+
+        <button type="submit" class="btn btn-success w-100">Add Book</button>
+
+    </form>
+
+    <hr class="my-4">
+
+    <h3 class="text-center title">Search Book</h3>
+
+    <form action="/searchBook" method="get" class="mt-3">
+
+        <div class="mb-3">
+            <input type="text" name="keyword" class="form-control"
+                   placeholder="Search by Title or Author">
+        </div>
+
+        <button class="btn btn-info w-100">Search</button>
+
+    </form>
+
+    <div class="text-center mt-4">
+        <a href="/sortBooks" class="btn sort-btn">Sort All Books</a>
+    </div>
+
+</div>
+        
+
+    </div>
+
+</div>
+
+</body>
+</html>

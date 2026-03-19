@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Books List</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+body{
+background: linear-gradient(135deg,#eef2f7,#e3f2fd);
+font-family:'Segoe UI',sans-serif;
+}
+
+.main-box{
+max-width:850px;
+margin:auto;
+margin-top:60px;
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+table{
+border-radius:10px;
+overflow:hidden;
+}
+
+thead{
+background:#0d6efd;
+color:white;
+}
+
+.back-btn{
+border-radius:8px;
+padding:8px 25px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="main-box">
+
+<h3 class="text-center mb-4 text-primary fw-semibold">📖 Books List</h3>
+
+<p class="text-danger text-center" th:text="${message}"></p>
+
+<table class="table table-hover text-center" th:if="${books}">
+<thead>
+<tr>
+<th>ID</th>
+<th>Title</th>
+<th>Author</th>
+</tr>
+</thead>
+
+<tbody>
+<tr th:each="b : ${books}">
+<td th:text="${b.id}"></td>
+<td th:text="${b.title}"></td>
+<td th:text="${b.author}"></td>
+</tr>
+</tbody>
+
+</table>
+
+<div class="text-center mt-4">
+<a href="/" class="btn btn-dark back-btn">⬅ Back Home</a>
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
