@@ -152,8 +152,7 @@ src/main/resources/application.properties
 
 <br>
 
-## 🔮 **Future Improvements** 
-<br>
+## 🔮 **Future Improvements** <br>
 Update book details feature<br>
 Login & authentication module<br>
 Pagination for large datasets<br>
