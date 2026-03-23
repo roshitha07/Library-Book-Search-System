@@ -131,29 +131,13 @@ Update database configuration inside:
 src/main/resources/application.properties
 
 
-🌐 Application Workflow
-User opens homepage
-System loads existing books from database
-User can add a new book
-Duplicate validation is performed
-User can search books by title or author
-User can sort books alphabetically
-All operations update UI dynamically
-
-🎯 Learning Outcomes
-Implementation of Spring Boot MVC layered architecture
-Integration of MySQL database using JPA
-Development of dynamic server-side rendered UI using Thymeleaf
-Designing clean placement-ready full stack project
-Understanding real-time debugging and validation handling
-
 
 🌐 Application URLs
-
-Library Home Page → http://localhost:8085/
-Add New Book → /addBook
-Search Books → /searchBook
-Sort Books → /sortBooks
+<br>
+* Library Home Page → http://localhost:8085/
+* Add New Book → /addBook
+* Search Books → /searchBook
+* Sort Books → /sortBooks
 🔹 Home Page
 <img width="1895" height="913" alt="image" src="https://github.com/user-attachments/assets/30929bcf-1452-417a-98d5-5222c42928c4" />
 🔹 Search Books
