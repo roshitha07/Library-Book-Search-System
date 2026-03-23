@@ -151,7 +151,7 @@ src/main/resources/application.properties
 <img width="1893" height="913" alt="image" src="https://github.com/user-attachments/assets/5d458c20-003d-4877-96c9-c4a78d2a185a" />
 
 <br>
-🔮 Future Improvements
+###🔮 Future Improvements
 Update book details feature<br>
 Login & authentication module<br>
 Pagination for large datasets<br>
