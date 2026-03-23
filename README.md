@@ -1,5 +1,3 @@
-
-
 📚 Library Book Search System
 
 A full-stack web application developed using Spring Boot, MySQL, Thymeleaf, HTML, CSS, and Bootstrap to manage library books efficiently.
