@@ -148,7 +148,7 @@ src/main/resources/application.properties
 🔹 Sort All Books
 <img width="1908" height="892" alt="image" src="https://github.com/user-attachments/assets/3033db07-9ea2-4765-b4df-365020a8d054" />
 🔹 Add Book
-<img width="734" height="428" alt="image" src="https://github.com/user-attachments/assets/5d458c20-003d-4877-96c9-c4a78d2a185a" />
+<img width="1893" height="913" alt="image" src="https://github.com/user-attachments/assets/5d458c20-003d-4877-96c9-c4a78d2a185a" />
 
 <br>
 🔮 Future Improvements
