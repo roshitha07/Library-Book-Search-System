@@ -69,42 +69,40 @@ The goal of this project is to implement **real-world full stack development con
 
 ---
 
-## 🏗 System Architecture
-Thymeleaf UI
-↓
-Spring Boot Controller
-↓
-Service Layer (Business Logic)
-↓
-Repository Layer (JPA)
-↓
-MySQL Database
 
 ---
 
 ## 📂 Project Structure
-library-book-search-system
+```
+LIBRARY-BOOK-SEARCH-SYSTEM
 │
-├── controller
-│ LibraryController.java
+├── src/main/java/com/library/librarysystem
+│   │
+│   ├── controller
+│   │     └── LibraryController.java
+│   │
+│   ├── service
+│   │     └── LibraryService.java
+│   │
+│   ├── repository
+│   │     └── BookRepository.java
+│   │
+│   ├── model
+│   │     └── Book.java
+│   │
+│   └── LibrarysystemApplication.java
 │
-├── service
-│ LibraryService.java
+├── src/main/resources
+│   │
+│   ├── templates
+│   │     ├── index.html
+│   │     └── result.html
+│   │
+│   └── application.properties
 │
-├── repository
-│ BookRepository.java
-│
-├── model
-│ Book.java
-│
-├── templates
-│ index.html
-│ result.html
-│
-├── application.properties
-└── pom.xml
-
----
+├── pom.xml
+└── README.md
+```
 
 ⚙️ How to Run the Project
 1️⃣ Backend Setup
@@ -132,12 +130,7 @@ Update database configuration inside:
 
 src/main/resources/application.properties
 
-Example configuration:
 
-spring.datasource.url=jdbc:mysql://localhost:3306/librarydb
-spring.datasource.username=root
-spring.datasource.password=yourpassword
-spring.jpa.hibernate.ddl-auto=update
 🌐 Application Workflow
 User opens homepage
 System loads existing books from database
@@ -146,6 +139,7 @@ Duplicate validation is performed
 User can search books by title or author
 User can sort books alphabetically
 All operations update UI dynamically
+
 🎯 Learning Outcomes
 Implementation of Spring Boot MVC layered architecture
 Integration of MySQL database using JPA
@@ -155,6 +149,7 @@ Understanding real-time debugging and validation handling
 
 
 🌐 Application URLs
+
 Library Home Page → http://localhost:8085/
 Add New Book → /addBook
 Search Books → /searchBook
