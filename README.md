@@ -138,6 +138,9 @@ src/main/resources/application.properties
 * Add New Book → /addBook
 * Search Books → /searchBook
 * Sort Books → /sortBooks
+<br>
+
+
 🔹 Home Page
 <img width="1895" height="913" alt="image" src="https://github.com/user-attachments/assets/30929bcf-1452-417a-98d5-5222c42928c4" />
 🔹 Search Books
@@ -147,9 +150,10 @@ src/main/resources/application.properties
 🔹 Add Book
 <img width="734" height="428" alt="image" src="https://github.com/user-attachments/assets/5d458c20-003d-4877-96c9-c4a78d2a185a" />
 
+<br>
 🔮 Future Improvements
-Update book details feature
-Login & authentication module
-Pagination for large datasets
-REST API development for React frontend
-Deployment on cloud platform
+Update book details feature<br>
+Login & authentication module<br>
+Pagination for large datasets<br>
+REST API development for React frontend<br>
+Deployment on cloud platform<br>
